@@ -10,47 +10,44 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
 
-size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-    size_t i;
-    size_t j;
-    size_t result;
+	size_t	i;
+	size_t	j;
+	size_t	result;
 
-    if (dstsize == 0)
-        return (ft_strlen(src));
-    else if(dstsize < ft_strlen(dst))
-        result = ft_strlen(src) + dstsize;
-    else
-        result = ft_strlen(dst) + ft_strlen(src);
-
-    i = 0;
-    j = ft_strlen(dst);
-
-    if (dstsize != 0)
-    {
-        while (src[i] && j < dstsize - 1)
-        {
-            dst[j] = src[i];
-            i++;
-            j++;
-        }
-        dst[j] = '\0';
-    }
-    return (result);
+	if (dstsize == 0)
+		return (ft_strlen(src));
+	else if (dstsize < ft_strlen(dst))
+		result = ft_strlen(src) + dstsize;
+	else
+		result = ft_strlen(dst) + ft_strlen(src);
+	i = 0;
+	j = ft_strlen(dst);
+	if (dstsize != 0)
+	{
+		while (src[i] && j < dstsize - 1)
+		{
+			dst[j] = src[i];
+			i++;
+			j++;
+		}
+		dst[j] = '\0';
+	}
+	return (result);
 }
 /*#include <stdio.h>
 
 int main()
 {
-    char string[] = "test";
-    char copy[] = "copy";
+	char string[] = "test";
+	char copy[] = "copy";
 
-    printf("%s\n", string);
-    printf("%s\n", copy);
-    printf("%zu\n", ft_strlcat(string, copy, 4));
-    printf("%s\n", string);
-    printf("%s\n", copy);
+	printf("%s\n", string);
+	printf("%s\n", copy);
+	printf("%zu\n", ft_strlcat(string, copy, 4));
+	printf("%s\n", string);
+	printf("%s\n", copy);
 }*/

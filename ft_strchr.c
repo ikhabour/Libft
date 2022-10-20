@@ -11,23 +11,21 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
-char    *ft_strchr(const char *s, int c)
+char	*ft_strchr(const char *s, int c)
 {
-    while (*s != '\0')
-    {
-        if (*s == (char)c)
-            return ((char *)s);
-        s++;
-    }
-    if((char )!c)
-        return ((char *)s);
-    return (0);
+	while (*s != '\0')
+	{
+		if (*s == (char)c)
+			return ((char *)s);
+		s++;
+	}
+	if (*s == (char) c)
+		return ((char *)s);
+	return (0);
 }
-/*#include <stdio.h>
-
-int main()
-{
-    printf("%s", ft_strchr("", 'a'));
-    return (0);
-}*/
+// int	main()
+// {
+// 	printf("%s", ft_strchr("bonjour", 's'));
+// }

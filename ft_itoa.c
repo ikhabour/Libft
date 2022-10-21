@@ -69,21 +69,19 @@ char	*ft_itoa(int n)
 	if (!s)
 		return (0);
 	if (nb == 0)
-	{
-		s[i] = 0;
-		i++;
-	}
+		s[i++] = '0';
 	while (nb)
 	{
-		s[i] = nb % 10 + '0';
+		s[i++] = nb % 10 + '0';
 		nb /= 10;
-		i++;
 	}
-	if (nb <= 0)
-	{
-		s[i] = '-';
-		i++;
-	}
+	if (n < 0)
+		s[i++] = '-';
 	s[i] = '\0';
 	return (ft_reverse(s));
 }
+
+// int	main()
+// {
+// 	printf("%s", ft_itoa(-2147483648));
+// }

@@ -18,6 +18,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	char	*new;
 	int		j;
 
+	if (!s1 || !s2)
+		return (0);
 	i = 0;
 	j = ft_strlen(s1);
 	new = malloc(ft_strlen(s1) + ft_strlen(s2) * sizeof(char) + 1);
@@ -38,8 +40,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[j] = '\0';
 	return (new);
 }
-/*
-int main()
-{
-	printf("%s", ft_strjoin("my name is", "ilyass khabouri"));
-}*/
+
+// int main()
+// {
+// 	printf("%s", ft_strjoin("my name is", NULL));
+// }

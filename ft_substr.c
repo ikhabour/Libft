@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	i;
 
+	if (!s)
+		return (0);
 	if (len > ft_strlen(s) - start)
 		len = ft_strlen(s) - start;
 	if (start >= ft_strlen(s))
@@ -31,16 +33,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!substr)
 		return (0);
 	while (s[i] && i < len)
-	{
-		substr[i] = s[start];
-		i++;
-		start++;
-	}
+		substr[i++] = s[start++];
 	substr[i] = '\0';
 	return (substr);
 }
 
 // int	main()
 // {
-// 	printf("%s", ft_substr("hola", 4294967295, 18446744073709551615));
+// 	printf("%s", ft_substr(NULL, 1, 0));
 // }

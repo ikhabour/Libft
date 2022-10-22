@@ -60,6 +60,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		len;
 	char	*new;
 
+	if (!s1 || !set)
+		return (0);
 	x = 0;
 	start = get_first_index(s1, set);
 	end = get_last_index(s1, set);
@@ -71,11 +73,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (new == NULL)
 		return (NULL);
 	while (start <= end)
-	{
-		new[x] = s1[start];
-		x++;
-		start++;
-	}
+		new[x++] = s1[start++];
 	new[x] = '\0';
 	return (new);
 }
+
+// int	main()
+// {
+// 	printf("%s", ft_strtrim("testejej", NULL));
+// }

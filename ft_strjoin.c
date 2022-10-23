@@ -40,8 +40,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	new[j] = '\0';
 	return (new);
 }
-
-// int main()
-// {
-// 	printf("%s", ft_strjoin("my name is", NULL));
-// }

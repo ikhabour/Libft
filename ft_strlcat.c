@@ -38,16 +38,3 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	}
 	return (result);
 }
-/*#include <stdio.h>
-
-int main()
-{
-	char string[] = "test";
-	char copy[] = "copy";
-
-	printf("%s\n", string);
-	printf("%s\n", copy);
-	printf("%zu\n", ft_strlcat(string, copy, 4));
-	printf("%s\n", string);
-	printf("%s\n", copy);
-}*/

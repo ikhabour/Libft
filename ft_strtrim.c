@@ -77,8 +77,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	new[x] = '\0';
 	return (new);
 }
-
-// int	main()
-// {
-// 	printf("%s", ft_strtrim("testejej", NULL));
-// }

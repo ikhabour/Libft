@@ -80,8 +80,3 @@ char	*ft_itoa(int n)
 	s[i] = '\0';
 	return (ft_reverse(s));
 }
-
-// int	main()
-// {
-// 	printf("%s", ft_itoa(-2147483648));
-// }

@@ -71,6 +71,17 @@ static	int	stringcount(const char *s, char c)
 	return (j);
 }
 
+static	void	ft_free(char *str)
+{
+	while (*str)
+	{
+		free (str);
+		(*str)--;
+	}
+	free (str);
+	return ;
+}
+
 char	**ft_split(const char *s, char c)
 {
 	int		i;
@@ -88,28 +99,14 @@ char	**ft_split(const char *s, char c)
 	{
 		while (s[i] == c && s[i])
 			i++;
-		if (s[i])
-		{
-			str[j] = my_strdup(s + i, c);
-			j++;
-		}
+		if (s[i] == 0)
+			break ;
+		str[j] = my_strdup(s + i, c);
+		if (!str[j])
+			ft_free(str[j]);
+		j++;
 		while (s[i] != c && s[i])
 			i++;
 	}
-	str[j] = 0;
-	return (str);
+	return (str[j] = 0, str);
 }
-
-// int		main(void)
-// {
-// 	int i = 0;
-// 	char **tab;
-
-// 	tab = ft_split(",bonjour,je,m'appel,,Arthur,", ',');
-// 	while (i < 4)
-// 	{
-// 		printf("string %d : %s\n", i, tab[i]);
-// 		i++;
-// 	}
-// 	return (0);
-// }

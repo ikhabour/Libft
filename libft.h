@@ -18,6 +18,12 @@
 # include <stddef.h>
 # include <stdio.h>
 
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
+
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_isalnum(int c);
 int		ft_isalpha(int c);

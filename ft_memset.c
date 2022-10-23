@@ -24,12 +24,3 @@ void	*ft_memset(void *b, int c, size_t len)
 	}
 	return (b);
 }
-/*#include <stdio.h>
-
-int main(){
-
-	char string[] = "this string is original";
-
-	printf("%s", ft_memset(string, '.', 5));
-
-}*/

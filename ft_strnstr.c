@@ -33,11 +33,3 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-
-int main()
-{
-	char search[] = "zakaria is very sexy and hot";
-	char find[] = "very";
-	printf("%s", ft_strnstr(search, find, 16));
-}*/

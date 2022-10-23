@@ -1,6 +1,6 @@
 NAME = libft.a
 CC = gcc
-FLAGS = -Wextra -Werror -Wall
+CFLAGS = -Wextra -Werror -Wall
 RM = rm -f
 SOURCES = 	ft_isalpha.c\
 			ft_isdigit.c\
@@ -45,8 +45,6 @@ all :	$(NAME)
 $(NAME) :	$(OBJECTS)
 	ar -r $(NAME) $(OBJECTS)
 
-$(OBJECTS) :	$(SOURCES)
-		$(CC) -c $(FLAGS) $(SOURCES)
 clean :
 		$(RM) $(OBJECTS)
 fclean : clean

@@ -30,16 +30,3 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	}
 	return (j);
 }
-/*#include <stdio.h>
-
-int main()
-{
-	char string[] = "test";
-	char copy[] = "copy";
-	printf("%s\n", string);
-	printf("%s\n", copy);
-	printf("%zu\n", ft_strlcpy(string, copy, 5));
-	printf("%s\n", string);
-	printf("%s\n", copy);   
-	return (0);
-}*/

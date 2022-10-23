@@ -37,11 +37,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-/*#include <stdio.h>
-
-int main()
-{
-	char string[] = "+1";
-
-	printf("%d", ft_atoi(string));
-}*/

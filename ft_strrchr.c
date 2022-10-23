@@ -25,11 +25,3 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
-/*#include <stdio.h>
-	
-int main()
-{
-	char str[] = "          testqzzsdawwws   ";
-	printf("%s", ft_strrchr(str, 'a'));
-	return (0);
-}*/

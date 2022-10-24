@@ -71,12 +71,12 @@ static	int	stringcount(const char *s, char c)
 	return (j);
 }
 
-static	void	ft_free(char *str)
+static	void	ft_free(char **str, int j)
 {
-	while (*str)
+	while (str[j])
 	{
-		free (str);
-		(*str)--;
+		free (str[j]);
+		j--;
 	}
 	free (str);
 	return ;
@@ -103,7 +103,7 @@ char	**ft_split(const char *s, char c)
 			break ;
 		str[j] = my_strdup(s + i, c);
 		if (!str[j])
-			ft_free(str[j]);
+			ft_free(str, j);
 		j++;
 		while (s[i] != c && s[i])
 			i++;

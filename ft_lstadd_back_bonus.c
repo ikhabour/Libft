@@ -1,29 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back_bonus.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ikhabour <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 11:30:51 by ikhabour          #+#    #+#             */
-/*   Updated: 2022/10/09 11:30:52 by ikhabour         ###   ########.fr       */
+/*   Created: 2022/10/25 13:29:22 by ikhabour          #+#    #+#             */
+/*   Updated: 2022/10/25 13:29:24 by ikhabour         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t	i;
+	t_list	*newlst;
 
-	i = 0;
-	while (i < n)
+	newlst = *lst;
+	if (*lst)
 	{
-		if (((unsigned char *)s)[i] == (unsigned char)c)
-		{
-			return ((unsigned char *)&s[i]);
-		}
-		i++;
+		newlst = ft_lstlast(newlst);
+		newlst->next = new;
 	}
-	return (0);
+	else
+		*lst = new;
 }

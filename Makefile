@@ -1,5 +1,4 @@
 NAME = libft.a
-CC = gcc
 CFLAGS = -Wextra -Werror -Wall
 RM = rm -f
 SOURCES = 	ft_isalpha.c\
@@ -45,7 +44,6 @@ SOURCES_B = ft_lstnew_bonus.c\
 			ft_lstdelone_bonus.c\
 			ft_lstclear_bonus.c\
 			ft_lstiter_bonus.c\
-			ft_lstmap_bonus.c\
 
 OBJECTS = $(SOURCES:.c=.o)
 

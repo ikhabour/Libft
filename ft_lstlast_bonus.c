@@ -22,3 +22,15 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+#include <stdio.h>
+// #include <string.h>
+// int main()
+// {
+// 	t_list	*head;
+	
+// 	head = ft_lstnew(strdup("middle"));
+// 	ft_lstadd_front(&head, ft_lstnew(strdup("start")));
+// 	ft_lstadd_back(&head, ft_lstnew(strdup("end")));
+// 	head = ft_lstlast(head);
+// 	printf("Content : %s\n", head->content);
+// }

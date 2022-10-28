@@ -17,3 +17,16 @@ void	ft_lstadd_front(t_list **lst, t_list *new)
 	new->next = *lst;
 	*lst = new;
 }
+// #include <stdio.h>
+// int	main()
+// {
+// 	t_list	*head;
+
+// 	head = ft_lstnew("Hello World");
+// 	ft_lstadd_back(&head, ft_lstnew("End"));
+// 	while (head)
+// 	{
+// 		printf("Content : %s\nNode Pointer : %p\n", head->content, head->next);
+// 		head = head->next;
+// 	}
+// }

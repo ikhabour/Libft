@@ -52,10 +52,10 @@ OBJECTS_B = $(SOURCES_B:.c=.o)
 all :	$(NAME)
 
 bonus: $(OBJECTS_B)
-	ar -r $(NAME) $(OBJECTS_B)
+	ar -rc $(NAME) $(OBJECTS_B)
 
 $(NAME) :	$(OBJECTS)
-	ar -r $(NAME) $(OBJECTS)
+	ar -rc $(NAME) $(OBJECTS)
 
 clean :
 		$(RM) $(OBJECTS) $(OBJECTS_B)

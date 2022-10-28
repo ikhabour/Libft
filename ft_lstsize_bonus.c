@@ -24,3 +24,15 @@ int	ft_lstsize(t_list *lst)
 	}
 	return (i);
 }
+#include <stdio.h>
+#include <string.h>
+int	main()
+{
+	t_list *head;
+
+	head = ft_lstnew(strdup("test"));
+	ft_lstadd_back(&head, ft_lstnew(strdup("test1")));
+	ft_lstadd_back(&head, ft_lstnew(strdup("test2")));
+	ft_lstadd_back(&head, ft_lstnew(strdup("test3")));
+	printf("%d", ft_lstsize(head));
+}

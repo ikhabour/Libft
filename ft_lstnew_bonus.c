@@ -16,10 +16,19 @@ t_list	*ft_lstnew(void *content)
 {
 	t_list	*first;
 
-	first = malloc(sizeof(struct s_list));
+	first = malloc(sizeof(t_list));
 	if (!first)
 		return (0);
 	first->content = content;
 	first->next = NULL;
 	return (first);
 }
+// #include <stdio.h>
+// int	main()
+// {
+// 	t_list	*head;
+
+// 	head = NULL;
+// 	head = ft_lstnew("Hello World");
+// 	printf("%s", (head)->content);
+// }

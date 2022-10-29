@@ -92,7 +92,7 @@ char	**ft_split(const char *s, char c)
 		return (0);
 	i = 0;
 	j = 0;
-	str = (char **)malloc((stringcount(s, c) + 1) * sizeof(char *));
+	str = malloc((stringcount(s, c) + 1) * sizeof(char *));
 	if (!str)
 		return (0);
 	while (s[i])

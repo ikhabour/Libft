@@ -20,27 +20,3 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 		lst = lst->next;
 	}
 }
-// #include <string.h>
-// void	f_(void *content)
-// {
-// 	char *s;
-// 	s = content;
-
-// 	*s += 1;
-// }
-// #include <stdio.h>
-// #include <string.h>
-// int	main()
-// {
-// 	t_list	*head;
-
-// 	head = ft_lstnew(strdup("2"));
-// 	ft_lstadd_front(&head, ft_lstnew(strdup("1")));
-// 	ft_lstadd_back(&head, ft_lstnew(strdup("3")));
-// 	ft_lstiter(head, f_);
-// 	while(head)
-// 	{
-// 		printf("Content : %s\n", head->content);
-// 		head = head->next;
-// 	}
-// }

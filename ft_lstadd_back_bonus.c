@@ -25,16 +25,3 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	else
 		*lst = new;
 }
-// #include <stdio.h>
-// int	main()
-// {
-// 	t_list	*head;
-
-// 	head = ft_lstnew("Hello World");
-// 	ft_lstadd_front(&head, ft_lstnew("Start"));
-// 	while(head)
-// 	{
-// 		printf("Content : %s\nNode Pointer : %p\n", head->content, head->next);
-// 		head = head->next;
-// 	}
-// }
